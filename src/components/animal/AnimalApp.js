@@ -1,5 +1,5 @@
-import axios from "axios"
 import React, { useState } from "react"
+import api from "../../api"
 import AnimalList from "./AnimalList"
 import SearchBar from "./SearchBar"
 
@@ -9,7 +9,7 @@ const AnimalApp = () => {
   const [animals, setAnimals] = useState([])
   
   const searchAnimals = async (searchText) => {
-    const res = await axios.get("http://codebangkok.com:5000/africa/animals", {
+    const res = await api.get("/africa/animals", {
       params: {
         search: searchText
       }

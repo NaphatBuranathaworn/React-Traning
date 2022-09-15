@@ -6,7 +6,7 @@ const AnimalList = ({ animals }) => {
     <div className="ui cards">
       {animals.map(({ id, image, gallery, name, headline }) =>
         <div key={id} className="card">
-          <div className="ui slide masked reveal image">
+          <div role="animal" className="ui slide masked reveal image">
             <img
               className="visible content"
               src={`http://codebangkok.com:5000/africa/hero/${image}.jpg`} />
